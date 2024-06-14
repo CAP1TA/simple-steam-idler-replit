@@ -27,7 +27,7 @@ user.on('loggedOn', () => {
 
 
 	user1 = new steamUser();
-	user1.logOn({"accountName": username1, "password": password1, "twoFactorCode": steamTotp.generateAuthCode(shared_secret2)});
+	user1.logOn({"accountName": username1, "password": password1, "twoFactorCode": steamTotp.generateAuthCode(shared_secret1)});
 	user1.on('loggedOn', () => {
 	if (user1.steamID != null) console.log(user1.steamID + ' - Successfully logged on');
 	user1.setPersona(status1);               
