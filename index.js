@@ -26,10 +26,10 @@ user.on('loggedOn', () => {
 	var status1 = 1;  // 1 - online, 7 - invisible
 
 
-	user2 = new steamUser();
-	user2.logOn({"accountName": username2, "password": password2, "twoFactorCode": steamTotp.generateAuthCode(shared_secret2)});
-	user2.on('loggedOn', () => {
-	if (user2.steamID != null) console.log(user2.steamID + ' - Successfully logged on');
+	user1 = new steamUser();
+	user1.logOn({"accountName": username1, "password": password1, "twoFactorCode": steamTotp.generateAuthCode(shared_secret2)});
+	user1.on('loggedOn', () => {
+	if (user1.steamID != null) console.log(user1.steamID + ' - Successfully logged on');
 	user1.setPersona(status1);               
 	user1.gamesPlayed(games1);
 });
